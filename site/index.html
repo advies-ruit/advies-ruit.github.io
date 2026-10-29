@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101410">
+<title>advies-ruit</title>
+<link rel="icon" href="favicon.png">
+<style>
+  /* Same colours as the game's start screen. No service worker here on
+   * purpose: one at the root would also take over /rolling-rob/. */
+  :root { --bg: #101410; --fg: #e8e8e8; --gold: #ffd700; --dim: #9a9a9a; --tile: #1a1f1a; }
+  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--fg);
+    font: 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 48px 16px; display: flex; flex-direction: column;
+    align-items: center; gap: 32px; }
+  h1 { margin: 0; color: var(--dim); font-size: 15px; font-weight: 500; letter-spacing: .08em; }
+  a.tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 24px 32px;
+    background: var(--tile); border: 1px solid #2a2f2a; border-radius: 12px; color: var(--fg);
+    text-decoration: none; transition: border-color .15s, transform .15s; }
+  a.tile:hover, a.tile:focus-visible { border-color: var(--gold); transform: translateY(-2px); outline: none; }
+  a.tile img { width: 160px; height: 160px; border-radius: 24px; }
+  a.tile strong { color: var(--gold); font-size: 22px; letter-spacing: .04em; }
+  a.tile span { color: var(--dim); font-size: 13px; text-align: center; max-width: 260px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>advies-ruit</h1>
+  <a class="tile" href="rolling-rob/">
+    <img src="rolling-rob.png" alt="">
+    <strong>Rolling Rob</strong>
+    <span>Play in the browser, also offline. Add it to your home screen to use it as an app.</span>
+  </a>
+</main>
+</body>
+</html>
